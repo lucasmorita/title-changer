@@ -15,10 +15,8 @@
   },
   "permissions": [
     "activeTab",
-    "contextMenus",
     "scripting",
-    "tabs",
-    "storage"
+    "tabs"
   ],
   "host_permissions": [
     "*://*/*"
@@ -32,5 +30,4 @@
       "128": "images/pencil_logo.png"
     }
   }
-
 }
