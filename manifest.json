@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Title changer",
+  "version": "0.0.1",
+  "description": "An extension that changes the title!",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Home"
+      }
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "scripting",
+    "tabs",
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/pencil_logo.png",
+      "32": "images/pencil_logo.png",
+      "48": "images/pencil_logo.png",
+      "128": "images/pencil_logo.png"
+    }
+  }
+
+}
