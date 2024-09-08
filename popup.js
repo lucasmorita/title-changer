@@ -1,12 +1,18 @@
 const form = document.getElementById('tabForm')
 
+function changeTitle() {
+  chrome.runtime.sendMessage({}, (response) => {
+    document.title = response.title
+  })
+}
+
 form.addEventListener('submit', event => {
   event.preventDefault()
   chrome.tabs.query({ active: true, currentWindow: true })
     .then(tabs => {
-      chrome.scripting.executeScript({ 
+      chrome.scripting.executeScript({
         target: { tabId: tabs[0].id },
-        files: ['injectedScript.js']
+        func: changeTitle
       })
     })
     .catch(err => console.log(err))
