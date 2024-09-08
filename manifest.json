@@ -1,17 +1,13 @@
 {
   "manifest_version": 3,
   "name": "Title changer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "An extension that changes the title!",
-  "background": {
-    "service_worker": "background.js"
-  },
   "permissions": [
     "activeTab",
-    "scripting",
-    "tabs"
+    "scripting"
   ],
-  "host_permissions": [
+  "optional_host_permissions": [
     "*://*/*"
   ],
   "action": {
